@@ -16,7 +16,7 @@ data "aws_vpc" "default" {
   default = true
 }
 
-resource "aws_security_group" "private_network_access" {
+resource "aws_security_group" "private_network_access1" {
   name        = "private_network_access"
   description = "security group for private network access"
   vpc_id      = "${data.aws_vpc.default.id}"
