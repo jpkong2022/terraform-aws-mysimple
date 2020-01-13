@@ -1,5 +1,4 @@
 variable "ami" { }
-variable "count" { }
 variable "instance_type" { }
 variable "instance_count" { }
 variable "region" { }
