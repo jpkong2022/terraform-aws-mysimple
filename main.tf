@@ -44,9 +44,11 @@ resource "aws_security_group" "mysg" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-# 	data "aws_instance" "default" {
-#   instance_id = aws_instance.default.id
-# }
+
+data "aws_instance" "default" {
+  instance_id = aws_instance.default.id
+}
+
 
 # data "aws_network_interface" "default" {
 #   id = data.aws_instance.default.network_interface_id
