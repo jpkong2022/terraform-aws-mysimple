@@ -1,3 +1,6 @@
+output "security_group" {
+    value = "aws_security_group.mysg.id"
+}
 # output "internal_availability_zone" {
 #   value = data.aws_availability_zones.available.names[0]
 # }
