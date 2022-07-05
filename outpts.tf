@@ -3,7 +3,7 @@ output "internal_availability_zone" {
 }
 
 output "cloud_instance_id" {
-  value = data.aws_instance.default.id
+  value = data.aws_instance.id
   }
 
 output "availability_zone" {
