@@ -44,4 +44,14 @@ resource "aws_security_group" "private_network_access1" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+	data "aws_instance" "default" {
+  instance_id = aws_instance.default.id
+}
+
+data "aws_network_interface" "default" {
+  id = data.aws_instance.default.network_interface_id
+}
+data "aws_security_group" "default" {
+  id = aws_security_group.default.id
+}
 }
