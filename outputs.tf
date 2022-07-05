@@ -20,7 +20,7 @@ output "public_ip_address" {
 
 
 output "power_state" {
-  value =data.aws_instance.default.*.instance_state
+  value =aws_instance.default.*.instance_state
   }
 
 output "public_dns_name" {
