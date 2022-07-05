@@ -3,7 +3,7 @@ output "security_group" {
 }
 
 output "cloud_instance_id" {
-   value       = aws_instance.default.id
+   value       = aws_instance.default.id[0]
   }
 
 output "availability_zone" {
