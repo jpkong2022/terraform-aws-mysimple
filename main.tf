@@ -16,8 +16,8 @@ data "aws_vpc" "default" {
   default = true
 }
 
-resource "aws_security_group" "private_network_access1" {
-  name        = var.sgname
+resource "aws_security_group" "mysg" {
+  
   description = "security group for private network access"
   vpc_id      = "${data.aws_vpc.default.id}"
 
@@ -44,14 +44,14 @@ resource "aws_security_group" "private_network_access1" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-	data "aws_instance" "default" {
-  instance_id = aws_instance.default.id
-}
+# 	data "aws_instance" "default" {
+#   instance_id = aws_instance.default.id
+# }
 
-data "aws_network_interface" "default" {
-  id = data.aws_instance.default.network_interface_id
-}
-data "aws_security_group" "default" {
-  id = aws_security_group.default.id
-}
+# data "aws_network_interface" "default" {
+#   id = data.aws_instance.default.network_interface_id
+# }
+# data "aws_security_group" "default" {
+#   id = aws_security_group.default.id
+# }
 }
