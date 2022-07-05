@@ -4,7 +4,6 @@ provider "aws" {
 	secret_key = var.secret_key
 }
 
-
 resource "aws_instance" "default" {
   ami = var.ami
   instance_type = var.instance_type
@@ -44,16 +43,11 @@ resource "aws_security_group" "mysg" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+}
 
 data "aws_instance" "default" {
   instance_id = aws_instance.default.id
 }
 
 
-# data "aws_network_interface" "default" {
-#   id = data.aws_instance.default.network_interface_id
-# }
-# data "aws_security_group" "default" {
-#   id = aws_security_group.default.id
-# }
-}
+
