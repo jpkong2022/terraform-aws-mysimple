@@ -5,9 +5,9 @@ output "security_group" {
 #   value = data.aws_availability_zones.available.names[0]
 # }
 
-# output "cloud_instance_id" {
-#   value = data.aws_instance.id
-#   }
+output "cloud_instance_id" {
+  value = data.aws_instance.id
+  }
 
 # output "availability_zone" {
 #   value = data.aws_instance.default.availability_zone
