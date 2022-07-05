@@ -1,7 +1,3 @@
-output "security_group" {
-    value = "aws_security_group.mysg"
-}
-
 output "cloud_instance_id" {
    value       = aws_instance.default.id
   }
