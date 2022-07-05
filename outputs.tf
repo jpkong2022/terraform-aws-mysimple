@@ -6,7 +6,7 @@ output "security_group" {
 # }
 
 output "cloud_instance_id" {
-  value = data.aws_instance.id
+   value       = aws_instance.this.*.id
   }
 
 # output "availability_zone" {
