@@ -8,11 +8,11 @@ output "cloud_instance_id" {
   }
 
 output "availability_zone" {
-  value = data.aws_instance.default.*.availability_zone
+  value =aws_instance.default.*.availability_zone
   }
   
 output "cloud_private_dns_name" {
-  value = data.aws_instance.default.*.private_dns
+  value = aws_instance.default.*.private_dns
   }
   
 # output "disk_size" {
@@ -20,7 +20,7 @@ output "cloud_private_dns_name" {
 #   }
   
 output "public_ip_address" {
-  value = data.aws_instance.default.*.public_ip
+  value = aws_instance.default.*.public_ip
   }
 
 # output "instance_type" {
@@ -44,7 +44,7 @@ output "public_ip_address" {
 #   }
 
 output "public_dns_name" {
-  value = data.aws_instance.default.*.public_dns
+  value = aws_instance.default.*.public_dns
   }
 
 # output "hostname" {
@@ -52,7 +52,7 @@ output "public_dns_name" {
 #   }
 
 output "private_ip_address" {
-  value = data.aws_instance.default.*.private_ip
+  value =aws_instance.default.*.private_ip
   }
  
 # output "region" {
