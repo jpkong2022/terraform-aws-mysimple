@@ -45,9 +45,7 @@ resource "aws_security_group" "mysg" {
   }
 }
 
-data "aws_instance" "default" {
-  instance_id = aws_instance.default.id
-}
+
 
 
 
