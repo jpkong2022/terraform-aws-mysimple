@@ -1,29 +1,27 @@
 output "security_group" {
     value = "aws_security_group.mysg.id"
 }
-# output "internal_availability_zone" {
-#   value = data.aws_availability_zones.available.names[0]
-# }
+
 
 output "cloud_instance_id" {
    value       = aws_instance.default.*.id
   }
 
-# output "availability_zone" {
-#   value = data.aws_instance.default.availability_zone
-#   }
+output "availability_zone" {
+  value = data.aws_instance.default.*.availability_zone
+  }
   
-# output "cloud_private_dns_name" {
-#   value = data.aws_instance.default.private_dns
-#   }
+output "cloud_private_dns_name" {
+  value = data.aws_instance.default.*.private_dns
+  }
   
 # output "disk_size" {
 #   value = var.volume_size
 #   }
   
-# output "public_ip_address" {
-#   value = data.aws_instance.default.public_ip
-#   }
+output "public_ip_address" {
+  value = data.aws_instance.default.*.public_ip
+  }
 
 # output "instance_type" {
 #   value = var.instance_type
@@ -45,17 +43,17 @@ output "cloud_instance_id" {
 #   value = data.aws_instance.default.public_dns
 #   }
 
-# output "public_dns_name" {
-#   value = data.aws_instance.default.public_dns
-#   }
+output "public_dns_name" {
+  value = data.aws_instance.default.*.public_dns
+  }
 
 # output "hostname" {
 #   value = data.aws_instance.default.public_dns
 #   }
 
-# output "private_ip_address" {
-#   value = data.aws_instance.default.private_ip
-#   }
+output "private_ip_address" {
+  value = data.aws_instance.default.*.private_ip
+  }
  
 # output "region" {
 #   value = var.region
